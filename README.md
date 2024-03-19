@@ -14,6 +14,7 @@ Gyakorlati órák kódanyaga és feladatok github könyvtára
 **Órai anyagok:**
  - [Prezentációk](https://github.com/Herkerr/Milton_ProgTech/tree/main/PPT) 
  - [Kód példák](https://github.com/Herkerr/Milton_ProgTech/tree/main/Example_collection)
+ - [Feladatok](https://github.com/Herkerr/Milton_ProgTech/tree/main/Feladatok)
 
 **Kötelező olvasmányok:**
 - Robert C. Martin (Uncle Bob) - Clean code
