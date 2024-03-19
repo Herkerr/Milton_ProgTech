@@ -20,6 +20,7 @@ Gyakorlati órák kódanyaga és feladatok github könyvtára
 - Robert C. Martin (Uncle Bob) - Túlélőkönyv programozóknak
 
 **Guthub használata a félév során:**
+
 GitHub egy fejlesztői platform/eszköz, mely lehetővé teszi fejlesztők számára, hogy létrehozzák, tárolják és kezeljék saját kódjukat, valamint közösen tudjanak dolgozni egymás kódján.
 A Git software-en alapul, disztribútált verziófelügyelettel, hozzáféréskezeléssel, bug követéssel és számos más hasznos integrációval.
 
