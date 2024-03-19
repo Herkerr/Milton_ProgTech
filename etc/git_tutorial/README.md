@@ -36,7 +36,9 @@ Láthatjuk, hogy a könyvtár clone-ozását követően, a jobb oldalon **3 új 
  2. **View the files of your repository in Finder** *(itt ha Önök Windows-t használnak, akkor File Explorer lesz)* - Néha szükséges direktben megnyitni a lokálisan tárolt file-okat, most viszont nem fogjuk ezt használni
  3. **Open the repository page on GitHub in your browser** - Ez a gomb, pedig az én általam készített eredeti könyvtárhoz navigálja Önöket
 
-**Nyomjuk meg az 1-es gombot.**
+**FONTOS:** Mindenek előtt nyomjuk meg a "Fetch Origin" gombot, ezzel frissítve az eredeti könyvtár legújabb verziójára a klónunkat!
+
+**Ezt követően bátran nyomjuk meg az 1-es gombot.**
 
 ***Figyelem:** Nálam automatikusan a VSCode-ot választotta a GitHub Desktop, itt a "Preferences" gombbal tudnak állítani rajta, hogy melyik szövegszerkesztőt használják (VSCode-ot javaslom).*
 
@@ -53,6 +55,10 @@ Amikor önök clone-oznak egy könyvtárat és dolgoznak benne (hacsak az nem a 
 ![commit](https://github.com/Herkerr/Milton_ProgTech/blob/main/etc/git_tutorial/gh_commit.png)
 
 A változtatásaimat a file-okban láthatom is a Github Desktopon, valamint innen tudom indítani a feltöltést a **Commit gombbal.**
+
+A Commit-oknak érdemes címet és leírást adni.
+
+**Ilyenkor történik is egy "Push", ami a Commit-unkat feltölti a célkönyvtárba.**
 *Itt már figyelmeztet minket a Github, hogy nem miénk az adott Master könyvtár, de ez nem probléma!*
 
 1. Szólni fog a Github Desktop, hogy szeretnénk-e "Fork"-olni a könyvtárat.
@@ -65,3 +71,31 @@ A változtatásaimat a file-okban láthatom is a Github Desktopon, valamint inne
 **To contribute to the Parent Project**
 ![fork2](https://github.com/Herkerr/Milton_ProgTech/blob/main/etc/git_tutorial/gh_fork_select.png)
 Itt a két opció közötti különbség, hogy egy már létező projekthez szeretnénk mi is hozzáadni kódot, vagy saját projektet készítünk belőle *(pl.: Open Source forrásból saját szoftvert)*
+
+## 4. Elkészült az elsp Fork-unk!
+A Fork ezesetben azt jelenti, hogy mi is kezelünk egy saját verziót az eredeti könyvtárból, ez már a miénk és szabadon garázdálkodhatunk benne!
+
+A Github segít a Fork-ban végzett változtatásokat összefésülni az eredetivel, mikor a Pull Request-et feladjuk, ezáltal az eredeti könyvtár kezelője könnyen áttekintheti mit akar és mit nem akar behúzni a kódjába *(Ő Pull-ol, mi csak megkérjük, hogy "Húzza be" a kódunkat.)* 
+
+## 5. Pull Request
+**Utolsó lépésünk**, hogy az eredeti könyvtár tulajdonosa is lássa mi milyen munkát/változtatásokat végeztünk, hogy feladjuk azokat egy **Pull Request-ben.**
+
+Erre számos módszer van, mi most a Github Desktop-ban kettőt alkalmazunk:
+
+**1. Push és Automatikus Pull Request:**
+![pullreq1](https://github.com/Herkerr/Milton_ProgTech/blob/main/etc/git_tutorial/gh_create_pullr.png)
+
+Push után automatikusan lehetővé teszi számunkra Github, hogy feladjunk egy Pull Request-et. 
+
+Ezt a megoldást javaslom én is, de ha már a saját Fork-unkra rámentettünk, Fetch-eltünk, akkor ez az opció eltűnhet.
+
+**2. Ilyenkor sincs baj, egyszerűen manuálisan adjuk fel a Pull Request-et:**
+![pullreq2](https://github.com/Herkerr/Milton_ProgTech/blob/main/etc/git_tutorial/gh_push2.png)
+
+**Végezetül adjunk leírást a Pull Request-hez és küldjük el azt!**
+![pullreq3](https://github.com/Herkerr/Milton_ProgTech/blob/main/etc/git_tutorial/gh_pull_request.png)
+Ide fogom kérni, hogy a **Neptun kódjuk utolsó 3 karakterét** írják be.
+
+Például: Neptun kód: ABCD2E, akkor **...D2E**
+
+**Köszönöm a figyelmet!**
