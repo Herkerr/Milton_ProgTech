@@ -73,3 +73,14 @@ public class Client
         environment.InteractWithSecurity(securityGuard);
     }
 }
+
+
+/*
+A Person osztály implementálja az Agent Interface-t, ezáltal reprezentálja a különböző agenteket a környezetben
+Van egy Visitor Interface-ünk, mellyel interaktálhatunk az Agentekkel.
+A Szekus implementálja az IVisitor-t
+A környezet osztály kezeli az Agent-ek gyájtését és lehetővé teszi az egymás közötti interakciókat Agentek között és Agent-Visitorok között.
+
+A kliens kódban csinálunk oár Person instane-ot és hozzáadjuk őket a környezethez
+Ezután létrehozunk egy szekust, akit arra használunk, hogy interaktáljon az agentekkel a környezetben.
+*/
