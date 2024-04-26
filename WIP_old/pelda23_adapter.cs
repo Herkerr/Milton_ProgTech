@@ -1,10 +1,10 @@
-// Interface for a generic payment gateway
+// Általános payment Gateway-ünk interfésze
 public interface IPaymentGateway
 {
     void ProcessPayment(double amount);
 }
 
-// Adapter for PayPal payment gateway
+// PayPal adapter
 public class PayPalAdapter : IPaymentGateway
 {
     private PayPalGateway paypalGateway;
@@ -21,62 +21,62 @@ public class PayPalAdapter : IPaymentGateway
     }
 }
 
-// Adapter for Stripe payment gateway
-public class StripeAdapter : IPaymentGateway
+// Barion Adapter
+public class BarionAdapter : IPaymentGateway
 {
-    private StripeGateway stripeGateway;
+    private BarionGateway barionGateway;
 
-    public StripeAdapter(StripeGateway stripeGateway)
+    public BarionAdapter(BarionGateway barionGateway)
     {
-        this.stripeGateway = stripeGateway;
+        this.barionGateway = barionGateway;
     }
 
     public void ProcessPayment(double amount)
     {
-        // Call the corresponding method in the StripeGateway API
-        stripeGateway.Charge(amount);
+        // Barion API metódushívása
+        barionGateway.Charge(amount);
     }
 }
 
-// Adapter for Square payment gateway
-public class SquareAdapter : IPaymentGateway
+// Simple Adapter
+public class SimpleAdapter : IPaymentGateway
 {
-    private SquareGateway squareGateway;
+    private SimpleGateway simpleGateway;
 
-    public SquareAdapter(SquareGateway squareGateway)
+    public SimpleAdapter(SimpleGateway simpleGateway)
     {
-        this.squareGateway = squareGateway;
+        this.simpleGateway = simpleGateway;
     }
 
     public void ProcessPayment(double amount)
     {
-        // Call the corresponding method in the SquareGateway API
-        squareGateway.CreatePayment(amount);
+        // Simple API metódushívása
+        simpleGateway.CreatePayment(amount);
     }
 }
 
-// Mock classes for PayPal, Stripe, and Square gateways
+// Mock osztályok a PayPal, Barion és Simple gateway-ekhez
 public class PayPalGateway
 {
     public void MakePayment(double amount)
     {
-        Console.WriteLine($"Processing PayPal payment of ${amount}");
+        Console.WriteLine($"PayPal fizetés feldolgozása ${amount} összegben.");
     }
 }
 
-public class StripeGateway
+public class BarionGateway
 {
     public void Charge(double amount)
     {
-        Console.WriteLine($"Charging ${amount} using Stripe");
+        Console.WriteLine($"Barion terhelés ${amount} összegben.");
     }
 }
 
-public class SquareGateway
+public class SimpleGateway
 {
     public void CreatePayment(double amount)
     {
-        Console.WriteLine($"Creating payment of ${amount} using Square");
+        Console.WriteLine($"Simple fizetés ${amount} összegben.");
     }
 }
 
@@ -84,15 +84,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Initialize adapters for different payment gateways
+        // Adapterek példányosítása a különböző gateway-ekhez
         var paypalAdapter = new PayPalAdapter(new PayPalGateway());
-        var stripeAdapter = new StripeAdapter(new StripeGateway());
-        var squareAdapter = new SquareAdapter(new SquareGateway());
+        var barionAdapter = new BarionAdapter(new BarionGateway());
+        var simpleAdapter = new SimpleAdapter(new SimpleGateway());
 
-        // Process payments using the adapters
+        // Tranzakciók feldolgozása adaptereken keresztül
         paypalAdapter.ProcessPayment(100.00);
-        stripeAdapter.ProcessPayment(150.00);
-        squareAdapter.ProcessPayment(200.00);
+        barionAdapter.ProcessPayment(100.00);
+        simpleAdapter.ProcessPayment(100.00);
     }
 }
 
