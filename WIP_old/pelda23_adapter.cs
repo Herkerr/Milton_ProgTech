@@ -16,7 +16,7 @@ public class PayPalAdapter : IPaymentGateway
 
     public void ProcessPayment(double amount)
     {
-        // Call the corresponding method in the PayPalGateway API
+        // PayPal API metódushívás
         paypalGateway.MakePayment(amount);
     }
 }
